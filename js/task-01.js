@@ -6,3 +6,4 @@ const categoryAndElements = NumberOfCategories.forEach((elem)=> {
     console.log('Category: ', elem.firstElementChild.textContent);
     console.log('Elements: ', elem.querySelectorAll('li').length);
 })
+
