@@ -1,35 +1,18 @@
-// Setup
-const contacts = [
-    {
-      firstName: "Akira",
-      lastName: "Laine",
-      number: "0543236543",
-      likes: ["Pizza", "Coding", "Brownie Points"],
-    },
-    {
-      firstName: "Harry",
-      lastName: "Potter",
-      number: "0994372684",
-      likes: ["Hogwarts", "Magic", "Hagrid"],
-    },
-    {
-      firstName: "Sherlock",
-      lastName: "Holmes",
-      number: "0487345643",
-      likes: ["Intriguing Cases", "Violin"],
-    },
-    {
-      firstName: "Kristian",
-      lastName: "Vos",
-      number: "unknown",
-      likes: ["JavaScript", "Gaming", "Foxes"],
-    },
-  ];
-  
-  function lookUpProfile(name, prop) {
-    // Only change code below this line
-  
-    // Only change code above this line
+const form = document.querySelector('.login-form');
+
+form.addEventListener('submit', onFormSubmit);
+
+function onFormSubmit(event) {
+  event.preventDefault();
+
+  const {
+    elements: { email, password },
+  } = event.currentTarget;
+console.log(email.value);
+  if (email.value === '' || password.value === '') {
+    alert('please fill in all fields');
+  } else {
+    console.log(`Login: ${email.value}, Password:${password.value}`);
   }
-  
-  lookUpProfile("Akira", "likes");
+  event.currentTarget.reset();
+}
