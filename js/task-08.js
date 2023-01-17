@@ -13,6 +13,6 @@ console.log(email.value);
     alert('please fill in all fields');
   } else {
     console.log(`Login: ${email.value}, Password:${password.value}`);
+    event.currentTarget.reset();
   }
-  event.currentTarget.reset();
 }
